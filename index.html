@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+</head>
+<body id="pageBody">
+    <div class="title">
+        <h1 class="title">Tranquil Sounds</h1> 
+    </div>
+    <div class="container">
+         <h1 class="name">Index</h1>
+         <p>Select a Genre to Play:</p>
+         <ul class="no-bullets">
+             <li>
+                <button type="button" onclick="location.href='#nature-sounds'">
+                    <span class="button_text">Nature Sounds</span>
+                    <span class="button_icon">
+                        <ion-icon name="leaf-outline"></ion-icon>
+                    </span>
+                </button>
+            </li>
+             <li>
+                <button type="button" onclick="location.href='#city-sounds'">
+                    <span class="button_text">City Sounds</span>
+                    <span class="button_icon">
+                        <ion-icon name="car-sport-outline"></ion-icon>
+                    </span>
+                </button>
+            </li>
+             <li>
+                <button type="button" onclick="location.href='#water-sounds'">
+                    <span class="button_text">Water Sounds</span>
+                    <span class="button_icon">
+                        <ion-icon name="water-outline"></ion-icon>
+                    </span>
+                </button>
+            </li>
+        </ul>
+    </div>
+    <div class="container-nature" id="nature-sounds">
+        <h1 class="name">Nature Sounds</h1>
+        <div id="nowPlayingNature" class="now-playing"></div>
+        <p class="select-sound-text">Select a sound to play:</p>
+        <div class="buttons-container">
+            <div class="sound-button-container">
+                <img id="summercricket-button" class="sound-button" src="images/summercricket.png" alt="Summer Cricket" onclick="playSound(event, 'summercricket', 'nature')">
+                <span class="sound-text">Summer Cricket</span>
+            </div>
+            <div class="sound-button-container">
+                <img id="sunnyday-button" class="sound-button" src="images/sunnyday.png" alt="Sunny Day" onclick="playSound(event, 'sunnyday', 'nature')">
+                <span class="sound-text">Sunny Day</span>
+            </div>
+            <div class="sound-button-container">
+                <img id="forest-button" class="sound-button" src="images/forest.png" alt="Forest" onclick="playSound(event, 'forest', 'nature')">
+                <span class="sound-text">Forest</span>
+            </div>
+        </div>
+        <audio id="audioPlayerNature" controls>
+            <source id="audioSourceNature" src="" type="audio/mpeg">
+        </audio>
+    </div>
+    <div class="container-city" id="city-sounds">
+         <h1 class="name">City Sounds</h1>
+            <div id="nowPlayingCity" class="now-playing"></div>
+            <p class="select-sound-text">Select a sound to play:</p>
+            <div class="buttons-container">
+                <div class="sound-button-container">
+                    <img id="NTC-button" class="sound-button" src="images/NTC.png" alt="Night Time City" onclick="playSound(event, 'NighttimeCity', 'city')">
+                    <span class="sound-text">City in the Night</span>
+                </div>
+                <div class="sound-button-container">
+                    <img id="Car-button" class="sound-button" src="images/Car.png" alt="Cars" onclick="playSound(event, 'Car', 'city')">
+                    <span class="sound-text">Traffic in the City</span>
+                </div>
+                <div class="sound-button-container">
+                    <img id="TP" class="sound-button" src="images/TP.png" alt="Tranquil Park" onclick="playSound(event, 'TranquilPark', 'city')">
+                    <span class="sound-text">Tranquil Park</span>
+                </div>
+            </div>
+            <audio id="audioPlayerCity" controls>
+                <source id="audioSourceCity" src="" type="audio/mpeg">
+            </audio>
+        </div>
+    <div class="container-water" id="water-sounds">
+         <h1 class="name">Water Sounds</h1>
+         <div id="nowPlayingWater" class="now-playing"></div>
+         <p class="select-sound-text">Select a sound to play:</p>
+         <div class="buttons-container">
+             <div class="sound-button-container">
+                 <img id="water-button" class="sound-button" src="images/WaterSplash.png" alt="Rain" onclick="playSound(event, 'WaterSplash', 'water')">
+                 <span class="sound-text">Rain</span>
+             </div>
+                <div class="sound-button-container">
+                    <img id="ocean-button" class="sound-button" src="images/River.png" alt="Ocean" onclick="playSound(event, 'River', 'water')">
+                    <span class="sound-text">Ocean</span>
+                </div>
+                <div class="sound-button-container">
+                    <img id="water2-button" class="sound-button" src="images/GentleWaves.png" alt="Gentle Waves" onclick="playSound(event, 'GentleWaves', 'water')">
+                    <span class="sound-text">Gentle Waves</span>
+                </div>
+            </div>
+            <audio id="audioPlayerWater" controls>
+                <source id="audioSourceWater" src="" type="audio/mpeg">
+            </audio>
+        </div>
+        <button onclick="topFunction()" id="myBtn" title="Go to top" name="top">
+            <ion-icon name="arrow-up-circle-outline"></ion-icon>
+            Top
+        </button>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
